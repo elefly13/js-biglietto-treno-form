@@ -7,26 +7,80 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Calcolo del prezzo del biglietto del treno con form</title>
 </head>
-<body class="debug">
+<body>
     <header>
-        <h1 class="titolo"></h1>
+        <div class="box-titolo">
+            <h1 class="titolo">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        </div>
     </header>
     <main>
         <!-- inizio form raccolta dati utente -->
         <div class="container_form">
             <div class="box_form">
-                
+                <!-- input per nome e cognome  -->
+                <div class="item">
+                    <label for="nome">Nome Cognome</label>
+                    <input id="nome" type="text" name="nome" placeholder="Inserisci il tuo nome">
+                </div>
+                <!-- input per numero km  -->
+                <div class="item">
+                    <label for="km">Km da percorrere</label>
+                    <input id="km" type="text" name="km" placeholder="Inserisci i km">
+                </div>
+                <!-- input per fascia d'età -->
+                <div class="item">
+                    <label for="Fascia-eta">Fascia d'età</label>
+                    <select name="fascia-eta" id="fascia-eta">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box_bottoni">
+                <button id="calcolaPrezzo">Genera</button>
+                <button id="annulla">Annulla</button>
             </div>
         </div>
         <!-- fine form raccolta dati utente -->
         <!-- inizio biglietto treno  -->
         <div class="container_biglietto">
-            <h1 class="titolo_biglietto"></h1>
-            <div class="container_dati">
-                <div class="box_dati">
-                    
+            <div id="biglietto" class="box">
+                <h1 class="titolo">IL TUO BIGLIETTO</h1>
+                <div class="container_dati">
+                    <div class="dettaglio">
+                        <h4>DETTAGLIO PASSEGGERI</h4>
+                    </div>
+                    <div class="box_dati">
+                        <ul class="lista_dati">
+                            <li>
+                                <h4>NOME PASSEGGERO</h4>
+                                <div id="nome"></div>
+                            </li>
+                            <li>
+                                <h4>Offerta</h4>
+                                <div id="offerta"></div>
+                            </li>
+                            <li>
+                                <h4>Carrozza</h4>
+                                <div id="numero-carrozza"></div>
+                            </li>
+                            <li>
+                                <h4>Codice CP</h4>
+                                <div id="codiceCp"></div>
+                            </li>
+                            <li>
+                                <h4>Costo biglietto</h4>
+                                <div id="costo-biglietto"></div>
+                            </li>
+                        </ul>
+                        
+                        
+                    </div>
                 </div>
+
             </div>
+           
         </div>
         <!-- fine biglietto treno  -->
         
