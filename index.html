@@ -25,12 +25,13 @@
                 <!-- input per numero km  -->
                 <div class="item">
                     <label for="km">Km da percorrere</label>
-                    <input id="km" type="text" name="km" placeholder="Inserisci i km">
+                    <input id="km" type="number" name="km" placeholder="Inserisci i km">
                 </div>
                 <!-- input per fascia d'età -->
                 <div class="item">
                     <label for="Fascia-eta">Fascia d'età</label>
                     <select name="fascia-eta" id="fascia-eta" >
+                        <option value=""></option>
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
                         <option value="over65">Over65</option>
@@ -38,15 +39,15 @@
                 </div>
             </div>
             <div class="box_bottoni">
-                <button id="calcolaPrezzo">Genera</button>
-                <button id="annulla">Annulla</button>
+                <button id="calcolaPrezzo" class="btn">Genera</button>
+                <button id="annulla" class="btn">Annulla</button>
             </div>
         </div>
         <!-- fine form raccolta dati utente -->
         <!-- inizio biglietto treno  -->
         <div class="container_biglietto">
             <div id="biglietto" class="box">
-                <h1 class="titolo">IL TUO BIGLIETTO</h1>
+                <h2 class="titolo">IL TUO BIGLIETTO</h2>
                 <div class="container_dati">
                     <div class="dettaglio">
                         <h4>DETTAGLIO PASSEGGERI</h4>
@@ -71,7 +72,7 @@
                             </li>
                             <li>
                                 <h4>Costo biglietto</h4>
-                                <div id="prezzo-biglietto"></div>
+                                <span>€  </span><span id="prezzo-biglietto"></span>
                             </li>
                         </ul>
                         
